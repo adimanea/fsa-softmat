@@ -1,0 +1,188 @@
+# Curs 1: Elemente de Python
+
+## Instalare și primul program
+La acest curs, exemplele incluse vor fi scrise folosind limbajul Python.
+În majoritatea distribuțiilor Linux și în majoritatea versiunilor macOS,
+limbajul este deja instalat. Același lucru este valabil și pentru Windows 10.
+
+**Observație:** Pentru uniformitate, dacă nu aveți un sistem Linux la îndemînă,
+recomandăm puternic instalarea WSL pe Windows 10, împreună cu sistemul Ubuntu. Un ghid
+detaliat găsiți [aici](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+
+Pentru descărcare manuală, accesați [site-ul oficial](https://www.python.org/downloads/).
+
+De asemenea, dacă instalați IDE-ul [PyCharm](https://www.jetbrains.com/pycharm/),
+vă va oferi opțiunea de a instala și limbajul, împreună cu principalele biblioteci.
+
+Verificați instalarea prin una dintre următoarele variante:
+
+Pentru sisteme Linux și macOS, deschideți terminalul și scrieți:
+```sh
+$ python --version
+Python 3.8.6
+```
+Dacă terminalul răspunde cu un mesaj precum cel de mai sus, ați reușit.
+
+Pentru sisteme Windows, dar nu numai, creați un fișier text cu numele și extensia
+`test.py`, apoi copiați în el codul de mai jos:
+
+```py
+print("Merge!")
+```
+
+Deschideți-l cu PyCharm și rulați-l (apăsați `Ctrl+Shift+F10`). Ar trebui să
+vedeți în jumătatea de jos a ecranului textul `Merge!`. Dacă se afișează
+acest mesaj, ați reușit.
+
+Alte detalii, la un nivel mai avansat, puteți găsi în [ghidul PyCharm](https://www.jetbrains.com/help/pycharm/creating-and-running-your-first-python-project.html#summary).
+
+De asemenea, veți mai avea nevoie de Jupyter. Folosind WSL cu un sistem Ubuntu,
+puteți rula în terminal:
+
+```sh
+$ sudo pip install jupyterlab
+```
+
+Odată instalat, testați introducînd în terminal:
+
+```sh
+$ jupyter --version
+jupyter core     : 4.6.3
+jupyter-notebook : 6.0.3
+qtconsole        : 4.7.4
+ipython          : 7.19.10
+ipykernel        : 5.3.0
+```
+
+Dacă vedeți cel puțin o parte din rezultatele de mai sus, ați reușit.
+
+Acum puteți crea un notebook Jupyter într-un folder ales cu comanda de terminal:
+
+```sh
+$ cd folderul/meu
+$ jupyter
+```
+
+Se va deschide o fereastră de browser cu conținutul directorului `folderul/meu`,
+în care puteți crea un nou notebook. Creați un notebook nou și testați scriind
+într-un bloc:
+
+```py
+print("Merge!")
+```
+
+apoi apăsați `Shift + Enter`. Dacă dedesubt apare mesajul `Merge!`, ați reușit.
+
+Documentația detaliată se găsește [aici](https://jupyter.org/documentation).
+
+## Programe exemplu
+Pentru familiarizarea cu limbajul de programare Python, am inclus
+o serie de exerciții în directorul `src`. Fiecare exercițiu are cerința
+în partea de sus a fișierului, apoi codul, cu comentarii.
+
+Descărcați exercițiile și rulați-le. În Linux sau WSL, acest lucru se
+face prin navigarea în directorul unde le-ați descărcat și apoi scriind
+în terminal `python exercitiu1.py`, pentru rularea primului exercițiu.
+
+## Exerciții suplimentare
+După familiarizarea cu limbajul și exercițiile incluse ca exemplu,
+încercați să rezolvați următoarele exerciții.
+
+1. Se citesc de la tastatură două numere întregi. Să se afișeze
+o listă cu divizorii lor primi comuni. Exemplu: se citesc 100
+și 200. Se afișează `[2, 5]`.
+
+2. Se citește de la tastatură un număr întreg. Să se afișeze
+descompunerea lui în factori primi. Exemplu: se citește
+1000. Se afișează `1000 = 2^3 * 5^3`.
+
+3. Se citește de la tastatură un număr prim `p`, un număr `n` și
+o listă de `n` numere naturale. Să se afișeze care numere din listă
+sînt divizibile cu `p`. *Se va ține cont și de validarea datelor.*
+Astfel, dacă numărul `p` introdus nu este prim, se va afișa eroare
+și se va cere un alt număr. Dacă `n` sau dacă vreunul dintre elementele listei
+nu este număr întreg (`n` natural!), se va cere un alt număr. Exemplu
+(mesajele care cer input de la utilizator au fost precedate de `--`):
+```
+-- Introduceți un număr prim p = 10
+10 nu este număr prim, reîncercați.
+-- Introduceți un număr prim p = 11
+-- Cîte elemente va conține lista? n = -3
+Numărul de elemente trebuie să fie natural! Reîncercați.
+-- Cîte elemente va conține lista? n = 4
+-- Introduceți, pe rînd, cele 4 elemente.
+4
+18
+120
+1.2
+-- 1.2 nu este număr întreg, reîncercați!
+121
+-- Elementele din lista [4, 18, 120, 121] divizibile cu 11 sînt: 121.
+```
+
+4. Se dau două numere naturale `m` și `n`. Să se afișeze numerele prime
+dintre `m` și `n`, precum și numărul acestora. *Se va ține cont și de validarea datelor!*.
+Exemplu:
+```
+-- Introduceți marginea inferioară a intervalului m = 20
+-- Introduceți marginea superioară a intervalului n = 4
+EROARE! Marginea superioară trebuie să fie mai mare decît marginea inferioară.
+Reîncercați cu un număr mai mare decît 20.
+-- Introduceți marginea superioară a intervalului n = 30
+Există 2 numere prime între 20 și 30: 23, 29.
+```
+
+5. Scrieți un program care să înmulțească două matrice pătratice de dimensiune `n`
+(cu `n` citit de la tastatură) și cu elemente din `Z_m` (cu `m` citit de la tastatură).
+
+6. Scrieți un program care să implementeze cifrul Caesar pentru un cuvînt.
+Se citește de la tastatură un cuvînt (fără caractere speciale) și o cheie de criptare `k`.
+Cifrul este rezultatul translației cu `k` poziții în alfabet a caracterelor din cuvîntul dat.
+*Adăugați condiții de validare, de exemplu, ignorînd caracterele non-alfabetice și*
+*asigurînd că se folosește o cheie număr întreg*.
+Exemplu:
+```
+-- Introduceți cuvîntul: laborator
+-- Introduceți cheia de criptare k = 2
+Codul rezultat este: ncdqtcvqt
+```
+
+7. Scrieți un program care să rezolve o ecuație de gradul 1 în `Z_n`, de forma `a * x + b = c`.
+Se citesc de la tastatură coeficienții `a, b, c` și modulul `n` și se returnează
+soluția `x`. *Atenție la condițiile de validare! O astfel de ecuație nu are mereu soluții!*.
+
+8. Scrieți un program care să rezolve o ecuație de gradul 2 în `Z_n`, de forma
+`a*x^2 + b*x + c = d`. Se citesc de la tastatură coeficienții `a, b, c, d`
+și modulul `n` și se returnează rădăcinile (dacă există). *Atenție la condițiile de validare!*
+
+9. Scrieți un program care să citească un text dintr-un fișier și să returneze
+o statistică simplă pe text, de exemplu:
+- numărul de vocale;
+- numărul de consoane;
+- numărul de cuvinte;
+- numărul de spații libere;
+- numărul de caractere numerice;
+- numărul total de semne;
+- cel mai lung cuvînt.
+
+10. Scrieți un program care să poată calcula suma a două numere de cîte cel mult 1000 cifre.
+Cele două numere se vor citi dintr-un fișier, iar suma se va afișa tot în fișier (același sau altul).
+
+## Exerciții bonus
+Exercițiile de mai jos sînt variante modificate ale celor precedente, cu un grad sporit
+de dificultate.
+
+B6.1. Cifrul Caesar pe blocuri: se împarte cuvîntul citit în blocuri de lungime `b`, citit de
+la tastatură și se folosesc chei diferite pentru fiecare bloc. Dacă cuvîntul citit
+nu se împarte în mod egal în blocuri de lungime `b`, se neglijează excesul sau caracterele
+insuficiente. Exemplu: pentru cuvîntul `matematica` și `b = 3`, se obțin 4 blocuri:
+`mat ema tic a`.
+
+B6.2. Cifrul Caesar cu majuscule introduse aleatoriu: Modificați programul cu cifrul Caesar
+astfel încît să transforme în majuscule caractere alese aleatoriu din cuvînt.
+
+B6.3. Cifrul Caesar cu fișiere: modificați oricare dintre exercițiile cu cifrul Caesar (6, B6.1., B6.2.),
+astfel încît să ia mesajul în text clar dintr-un fișier și doar cheia de criptare de la tastatură.
+Cifrul rezultat se va afișa tot într-un fișier.
+
+B9.1. Folosiți o bibliotecă grafică (exemplu: `matplotlib`) și reprezentați grafic statistici pe text.
