@@ -35,7 +35,7 @@ Pe măsură ce alte resurse software vor fi considerate potrivite, ele vor
 fi adăugate aici.
 
 Sugestii de alternative, cu acceași rezervă a suportului limitat, cel puțin
-din partea profesorilor:
+din partea mea:
 - Sistemele de operare Windows sau macOS;
 - Editoare de text sau IDE: VSCode, Visual Studio, Sublime Text, PyCharm;
 - Terminalul inclus în sistemul de operare (e.g. `xterm`, `Terminal.app`) cu shell-ul `bash` sau `zsh`;
