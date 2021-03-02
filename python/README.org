@@ -5,4 +5,4 @@
 
 Cuprins:
 - [[file:1-intro/README.org][aici]] sînt notițele pentru primul curs, care conțin indicații teoretice, exemple și exerciții;
-- [[file:exemple][aici]] sînt exemple rezolvate, atît de programe Python, cît și o foaie Jupyter.
+- [[file:1-intro/exemple][aici]] sînt exemple rezolvate, atît de programe Python, cît și o foaie Jupyter.
