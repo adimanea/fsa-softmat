@@ -1,0 +1,4 @@
+#+TITLE: (Java și) Software Matematic
+#+AUTHOR: Adrian Manea
+
+În acest director veți găsi materialele corespunzătoare pentru curs și laborator, în varianta Python.

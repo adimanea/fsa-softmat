@@ -1,0 +1,253 @@
+#+TITLE: Curs și Laborator 1: Instalare, configurare și familiarizare
+
+* Instalarea limbajului
+În majoritatea distribuțiilor Linux și în sistemele macOS, limbajul este deja instalat.
+Conform [[https://devblogs.microsoft.com/python/python-in-the-windows-10-may-2019-update/][acestui]] articol, limbajul se instalează imediat din Store în Windows 10, începînd cu update-ul din mai 2019.
+
+Puteți testa instalarea astfel:
+- pe macOS și Linux, deschideți un terminal și scrieți ~which python~, apoi apăsați =Enter=. Dacă terminalul răspunde cu o cale precum =/usr/bin/python=, înseamnă că limbajul este instalat. Dacă primiți un mesaj precum =python: command not found=, căutați instrucțiunile corespunzătoare pentru instalarea limbajului;
+- pe Windows, deschideți o consolă (Command Prompt) cu Start > Run > cmd și apăsați =Enter=, apoi scrieți =python=. Dacă primiți mesaje care se încheie cu simbolurile =>>>= pe o linie nouă, înseamnă că limbajul este instalat. Scrieți =exit()=, apăsați =Enter= și închideți consola. Dacă primiți un mesaj de eroare, urmați pașii din articolul menționat și instalați limbajul din Microsoft Store.
+
+În urma acestui pas, ar trebui să aveți instalată ultima versiune a limbajului Python. 
+Indiferent de versiunea minoră, este important ca versiunea majoră să fie 3. Testați acest
+lucru introducînd în terminal sau consolă comanda =python --version=. Ar trebui să primiți
+un răspuns de forma =Python 3.9.1= (important este ca prima cifră să fie 3).
+
+* Instalarea uneltelor de lucru
+În continuare, vă veți instala principalele unelte de lucru. Mai precis, un editor
+text sau un IDE. Alegerea vă aparține, dar cîteva opțiuni sînt:
+- vim: deja inclus în macOS și Linux, dar greu de folosit, dacă nu sînteți familiarizați cu el;
+- [[https://www.gnu.org/software/emacs/][GNU Emacs]]: foarte puternic și flexibil, dar greu de folosit dacă nu aveți experiențe anterioare;
+- [[https://www.jetbrains.com/pycharm/][JetBrains PyCharm]]: un IDE, care vine cu toate uneltele necesare, suficient de puternic, dar și de prietenos (un [[https://www.jetbrains.com/help/pycharm/quick-start-guide.html#c304d95f][tutorial scurt]]);
+- [[https://code.visualstudio.com/][Visual Studio Code]]: un editor, cu multe plugin-uri care se pot instala pentru a-l face cît mai puternic și flexibil (exemplu: [[https://code.visualstudio.com/docs/python/python-tutorial][pachetul de Python, cu un ghid]]);
+
+Opțional, mai puteți instala diverse plugin-uri și extensii, după preferințe, dar, de exemplu, PyCharm sau (VSCode + pachetele de Python) ar trebui să fie suficient.
+
+Tot opțional, puteți instala [[https://docs.microsoft.com/en-us/windows/wsl/install-win10][Windows Subsystem for Linux]], pentru a avea un mediu nativ Ubuntu în Windows 10.
+
+Veți mai avea nevoie și de Jupyter, un mediu interactiv de programare și vizualizare, pe care îl puteți instala de [[https://jupyter.org/][aici]].
+
+Într-un sistem de tip GNU/Linux sau macOS, puteți instala Jupyter din terminal, cu comanda:
+#+begin_src sh
+	$ sudo pip install jupyterlab
+#+end_src
+
+Verificați apoi instalarea cu comanda
+#+begin_src sh
+	$ jupyter --version
+	# dacă ați reușit, veți vedea:
+	jupyter core     : 4.6.3
+	jupyter-notebook : 6.0.3
+	qtconsole        : 4.7.4
+	ipython          : 7.19.10
+	ipykernel        : 5.3.0
+#+end_src
+
+Pentru a folosi Jupyter, trebuie să creați un fișier (notebook) nou. Din directorul unde vreți să lucrați,
+lansați kernel-ul Jupyter cu comanda:
+#+begin_src sh
+	# $ cd directorul/de/lucru
+	$ jupyter
+#+end_src
+
+Se va deschide o fereastră de browser, cu conținutul directorului de lucru.
+Creați un notebook nou din interfața grafică și scrieți într-un bloc:
+
+#+begin_src python
+	print("Merge!")
+#+end_src
+
+Apoi apăsați =Shift + Enter=. Dacă dedesubt apare mesajul =Merge!=, ați reușit.
+
+Documentația detaliată se găsește [[https://jupyter.org/documentation][aici]].
+
+* CHECKPOINT
+Înainte de a merge mai departe, asigurați-vă că:
+- aveți limbajul instalat;
+- aveți un editor sau IDE instalat, împreună cu posibilele extensii esențiale (dacă este cazul);
+- știți să deschideți editorul, să creați un fișier simplu, să introduceți în el, de exemplu, o linie de cod precum:
+#+begin_src python
+	print("Hello World!")
+#+end_src
+și să rulați fișierul (=Ctrl+Shift+F10= în PyCharm).
+- știți să deschideți Jupyter și să creați un notebook nou.
+
+* Exemple
+Dacă ați ajuns pînă aici, vizitați [[file:exemple][folderul de exemple]], care conține atît un [[file:exemple/exemplu-jupyter.ipynb][exemplu Jupyter]], 
+cît și progrămele Python.
+
+Le puteți descărca și testa pe propriul computer sau studiați-le în browser.
+
+* Exerciții
+După familiarizarea cu limbajul și exercițiile incluse ca exemplu,
+încercați să rezolvați următoarele exerciții.
+
+1. Se citesc de la tastatură două numere întregi. Să se afișeze o listă
+   cu divizorii lor primi comuni. Exemplu: se citesc 100 și 200. Se
+   afișează =[2, 5]=.
+
+2. Se citește de la tastatură un număr întreg. Să se afișeze
+   descompunerea lui în factori primi. Exemplu: se citește
+
+3. Se afișează =1000 = 2^3 * 5^3=.
+
+4. Se citește de la tastatură un număr prim =p=, un număr =n= și o listă
+   de =n= numere naturale. Să se afișeze care numere din listă sînt
+   divizibile cu =p=. /Se va ține cont și de validarea datelor./ Astfel,
+   dacă numărul =p= introdus nu este prim, se va afișa eroare și se va
+   cere un alt număr. Dacă =n= sau dacă vreunul dintre elementele listei
+   nu este număr întreg (=n= natural!), se va cere un alt număr. Exemplu
+   (mesajele care cer input de la utilizator au fost precedate de =--=):
+
+#+begin_example
+  -- Introduceți un număr prim p = 10
+  10 nu este număr prim, reîncercați.
+  -- Introduceți un număr prim p = 11
+  -- Cîte elemente va conține lista? n = -3
+  Numărul de elemente trebuie să fie natural! Reîncercați.
+  -- Cîte elemente va conține lista? n = 4
+  -- Introduceți, pe rînd, cele 4 elemente.
+  4
+  18
+  120
+  1.2
+  -- 1.2 nu este număr întreg, reîncercați!
+  121
+  -- Elementele din lista [4, 18, 120, 121] divizibile cu 11 sînt: 121.
+#+end_example
+
+4. Se dau două numere naturale =m= și =n=. Să se afișeze numerele prime
+   dintre =m= și =n=, precum și numărul acestora. /Se va ține cont și de
+   validarea datelor!/. Exemplu:
+
+#+begin_example
+  -- Introduceți marginea inferioară a intervalului m = 20
+  -- Introduceți marginea superioară a intervalului n = 4
+  EROARE! Marginea superioară trebuie să fie mai mare decît marginea inferioară.
+  Reîncercați cu un număr mai mare decît 20.
+  -- Introduceți marginea superioară a intervalului n = 30
+  Există 2 numere prime între 20 și 30: 23, 29.
+#+end_example
+
+5. Scrieți un program care să înmulțească două matrice pătratice de
+   dimensiune =n= (cu =n= citit de la tastatură) și cu elemente din
+   =Z_m= (cu =m= citit de la tastatură).
+
+6. Scrieți un program care să implementeze cifrul Caesar pentru un
+   cuvînt. Se citește de la tastatură un cuvînt (fără caractere
+   speciale) și o cheie de criptare =k=. Cifrul este rezultatul
+   translației cu =k= poziții în alfabet a caracterelor din cuvîntul
+   dat. /Adăugați condiții de validare, de exemplu, ignorînd caracterele
+   non-alfabetice și/ /asigurînd că se folosește o cheie număr întreg/.
+   Exemplu:
+
+#+begin_example
+  -- Introduceți cuvîntul: laborator
+  -- Introduceți cheia de criptare k = 2
+  Codul rezultat este: ncdqtcvqt
+#+end_example
+
+7. Scrieți un program care să rezolve o ecuație de gradul 1 în =Z_n=, de
+   forma =a * x + b = c=. Se citesc de la tastatură coeficienții
+   =a, b, c= și modulul =n= și se returnează soluția =x=. /Atenție la
+   condițiile de validare! O astfel de ecuație nu are mereu soluții!/.
+
+8. Scrieți un program care să rezolve o ecuație de gradul 2 în =Z_n=, de
+   forma =a*x^2 + b*x + c = d=. Se citesc de la tastatură coeficienții
+   =a, b, c, d= și modulul =n= și se returnează rădăcinile (dacă
+   există). /Atenție la condițiile de validare!/
+
+9. Scrieți un program care să citească un text dintr-un fișier și să
+   returneze o statistică simplă pe text, de exemplu:
+
+- numărul de vocale;
+- numărul de consoane;
+- numărul de cuvinte;
+- numărul de spații libere;
+- numărul de caractere numerice;
+- numărul total de semne;
+- cel mai lung cuvînt.
+
+10. Scrieți un program care să poată calcula suma a două numere de cîte
+    cel mult 1000 cifre. Cele două numere se vor citi dintr-un fișier,
+    iar suma se va afișa tot în fișier (același sau altul).
+
+* Exerciții bonus
+Exercițiile de mai jos sînt variante modificate ale celor precedente, cu
+un grad sporit de dificultate.
+
+B6.1. Cifrul Caesar pe blocuri: se împarte cuvîntul citit în blocuri de
+lungime =b=, citit de la tastatură și se folosesc chei diferite pentru
+fiecare bloc. Dacă cuvîntul citit nu se împarte în mod egal în blocuri
+de lungime =b=, se neglijează excesul sau caracterele insuficiente.
+Exemplu: pentru cuvîntul =matematica= și =b = 3=, se obțin 4 blocuri:
+=mat ema tic a=.
+
+B6.2. Cifrul Caesar cu majuscule introduse aleatoriu: Modificați
+programul cu cifrul Caesar astfel încît să transforme în majuscule
+caractere alese aleatoriu din cuvînt.
+
+B6.3. Cifrul Caesar cu fișiere: modificați oricare dintre exercițiile cu
+cifrul Caesar (6, B6.1., B6.2.), astfel încît să ia mesajul în text clar
+dintr-un fișier și doar cheia de criptare de la tastatură. Cifrul
+rezultat se va afișa tot într-un fișier.
+
+B9.1. Folosiți o bibliotecă grafică (exemplu: =matplotlib=) și
+reprezentați grafic statistici pe text.
+
+* Exerciții simple
+Dacă noțiunile de mai sus par mult prea complicate, propunem următoarele exerciții simple.
+
+S1. Citiți de la tastatură numere pînă la introducerea simbolului =q= și afișați suma lor.
+#+begin_example
+	Introduceți numere de adunat, ieșiți cu q:
+	4
+	6
+	3
+	9
+	-1
+	2
+	q
+	Suma este: 23
+#+end_example
+
+S2. Citiți de la tastatură numere impare și afișați-le într-o listă. Citirea se termină cu introducerea unui număr par sau 0.
+#+begin_example
+	Introduceți numere impare. Ieșiți cu 0 sau cu un număr par:
+	5
+	7
+	11
+	2121
+	4111
+	0
+	Lista numerelor impare introduse este: [5, 7, 11, 2121, 4111]
+#+end_example
+
+S3. Prezentați utilizatorilui o alegere între =sumă= și =produs=, apoi cereți două numere. Se va afișa operația aleasă între ele.
+#+begin_example
+	Ce veți calcula: suma (s) sau produsul (p)?
+	s
+	Introduceți numerele de sumat:
+	21
+	51
+	Suma lor este: 72
+#+end_example
+
+S4. Afișați numărul de divizori proprii (diferiți de 1 și de numărul dat) ai unui număr citit de la tastatură.
+#+begin_example
+	Introduceți numărul: 42
+	Numărul 42 are 5 divizori.
+#+end_example
+
+S5. Citiți două numere de la tastatură și afișați dacă vreunul dintre ele divide pe celălalt.
+#+begin_example
+	Introduceți două numere:
+	32
+	16
+	16 este divizor al lui 32
+	---------------------------
+	Introduceți două numere:
+	11
+	41
+	Niciunul dintre numere nu divide pe celălalt
+#+end_example

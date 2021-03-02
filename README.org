@@ -1,0 +1,78 @@
+#+TITLE: Java și Software Matematic
+#+AUTHOR: Adrian Manea
+
+* Generalități
+Acest repository conține materialele didactice pentru cursul, seminarul și
+laboratorul de [[https://tcsi.ro/fise_discipline/7b_mathsoft-presentation.pdf][Java și Software Matematic]] din cadrul programului de master
+[[https://tcsi.ro/][TCSI]] al Facultății de Științe Aplicate, Universitatea Politehnica, București.
+
+Cursul se axează pe implementarea metodelor computaționale pentru
+probleme matematice diverse, cu accent pe /vizualizarea/ și prezentarea
+într-un mod cît mai informativ a datelor și rezultatelor matematice.
+
+Desfășurarea activităților cuprinde:
+- curs, care sumarizează cîteva noțiuni teoretice de bază, generale;
+- laborator Python, în care implementarea exercițiilor și noțiunilor propuse studenților se va face în limbajul Python;
+- laborator Java, în care se va folosi limbajul corespunzător pentru /aceleași probleme și noțiuni de lucru/.
+
+Studenții sînt încurajați să participe la oricare dintre activități și mai mult,
+pot folosi orice alte limbaje de programare preferă, împreună cu uneltele software corespunzătoare.
+
+Exemplele și noțiunile corespunzătoare Python se vor prezenta folosind:
+- SO: GNU/Linux, distribuția Manjaro i3;
+- Editor: GNU Emacs 27;
+- Terminal: =st= și shell-ul =bash=;
+- Browsere web: Firefox și Brave, pentru exemplele Jupyter, rulate pe =localhost=.
+
+Orice alte unelte de programare pot fi folosite, cu rezerva unui suport limitat din partea profesorilor.
+
+* Cuprins
+1. Introducere în uneltele și limbajele de programare:
+	 - instalarea limbajelor și a programelor folosite (Python, Java, PyCharm, vim, Emacs, Eclipse, Visual Studio Code etc.);
+	 - limbajele Python și Java: exemple și programe simple, pentru familiarizare cu sintaxa;
+	 - elemente de literate programming folosind Jupyter Notebooks;
+2. Grafice 2D discrete:
+	 - interpretarea grafică a seturilor de date prin histograme, bar charts, pie-charts, scatter plots;
+3. Grafice 2D continue:
+	 - rezolvarea grafică a ecuațiilor de forma ~f(x) = 0~, unde ~f~ este o funcție reală cunoscută;
+	 - interpretarea comportamentului și evoluției unei funcții în raport cu modificarea parametrilor (monotonie, extreme etc.);
+4. Cîmpuri vectoriale și heatmaps:
+	 - interpretarea grafică a datelor distribuite într-un plan (e.g. pe hărți);
+	 - calcule și interpretări ale operatorilor diferențiali pe astfel de date (gradient, divergență, rotor);
+5. Grafice 3D:
+	 - interpretarea grafică a problemelor de analiză tridimensională (vizualizarea intersecțiilor între suprafețe, a volumului delimitat etc.).
+
+** Opțional
+În funcție de evoluția activităților și de feedback, se pot adăuga și următoarele conținuturi:
+- calcul simbolic în SymPy și vizualizarea rezultatelor;
+- probleme de aritmetică modulară, cu aplicații în criptografie și vizualizare;
+- elemente de logică și teoria mulțimilor, folosind structuri de date specifice;
+- versionarea codului și colaborare folosind =git= și GitHub;
+- alte propuneri din partea studenților.
+
+* Desfășurarea activităților
+Materialele de studiu vor fi publicate pe GitHub și Moodle cu cel puțin o zi înaintea cursului și laboratorului.
+Astfel, studenții vor ști în avans o bună parte a subiectelor ce vor fi discutate la întîlnirea care urmează.
+
+Materialele vor conține elemente de teorie, exerciții rezolvate (ca exemplu) și exerciții propuse, care se vor
+rezolva în timpul laboratorului. Studenții pot rezolva în avans exercițiile și le vor /prezenta/ (cu explicații
+și, răspunzînd la eventuale întrebări) la laborator.
+
+Exercițiile rămase nerezolvate vor fi considerate temă și vor avea un termen limită asociat pînă cînd pot
+fi rezolvate și trimise ori prezentate pentru a primi punctajul corespunzător.
+
+* Evaluare
+Studenții vor fi evaluați /în primul rînd continuu, pe parcursul semestrului/, prin contribuții la curs
+și laborator (rezolvare și prezentare de exerciții).
+
+Alternativ la problemele propuse la laborator, studenții pot pregăti un proiect amplu 
+(bazat pe cod de minimum 200 linii), pe o temă propusă de unul dintre profesori sau propusă de
+student și aprobată de cel puțin unul dintre profesori. Această temă poate fi implementată în orice
+limbaj de programare preferă studentul, folosind unelte software la alegere. Tema, însă, trebuie
+să se situeze în contextul cursului.
+
+Dacă se alege varianta proiectului, studentul are obligația să prezinte progresul pe parcursul
+semestrului de cel puțin 4 ori (i.e. în 4 laboratoare diferite). În caz contrar, punctajul
+maxim pe care îl poate obține va scădea.
+
+Pe lîngă aceasta, se va organiza și o examinare finală, a cărei desfășurare va fi anunțată pe parcurs.
