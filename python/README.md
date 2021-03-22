@@ -12,4 +12,4 @@ Cuprins:
 - [aici](https://github.com/adimanea/fsa-softmat/tree/main/python/exemple-diverse/proiecte-acs-jupyter)
   sînt exemple diverse, utile pentru anumite lecții studiate;
 - [aici](https://github.com/adimanea/fsa-softmat/blob/main/python/checklist.md) este o listă a subiectelor și țintelor ce se vor atinse pe parcursul fiecărui curs, laborator și seminar;
-- [aici](fhttps://github.com/adimanea/fsa-softmat/blob/main/python/exercitii.m) este o listă centralizată a exercițiilor, pe grade de dificultate, pentru fiecare săptămînă;
+- [aici](https://github.com/adimanea/fsa-softmat/blob/main/python/exercitii.md) este o listă centralizată a exercițiilor, pe grade de dificultate, pentru fiecare săptămînă;
