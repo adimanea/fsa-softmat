@@ -1,9 +1,0 @@
-#+TITLE: (Java și) Software Matematic
-#+AUTHOR: Adrian Manea
-
-În acest director veți găsi materialele corespunzătoare pentru curs și laborator, în varianta Python.
-
-Cuprins:
-- [[file:1-intro/README.org][aici]] sînt notițele pentru primul curs, care conțin indicații teoretice, exemple și exerciții;
-- [[file:1-intro/exemple][aici]] sînt exemple rezolvate, atît de programe Python, cît și o foaie Jupyter;
-- [[https://github.com/adimanea/fsa-softmat/tree/main/python/exemple-diverse/proiecte-acs-jupyter][aici]] sînt exemple diverse, utile pentru anumite lecții studiate.
