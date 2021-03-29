@@ -20,7 +20,7 @@ pot folosi orice alte limbaje de programare preferă, împreună cu uneltele sof
 
 Exemplele și noțiunile corespunzătoare Python se vor prezenta folosind:
 - SO: GNU/Linux, distribuția Manjaro i3;
-- Editor: GNU Emacs 27;
+- Editor: GNU Emacs 27 și nvim 0.4.4;
 - Terminal: =st= și shell-ul =bash=;
 - Browsere web: Firefox și Brave, pentru exemplele Jupyter, rulate pe =localhost=.
 
