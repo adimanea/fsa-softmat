@@ -9,6 +9,8 @@ Scopul principal este de instalare a uneltelor necesare:
 - limbajul (compilatorul/interpretorul etc);
 - un editor/IDE preferat.
 
+Vezi detalii despre setup și [aici](https://github.com/adimanea/fsa-softmat/tree/main/python/1-intro/README.org).
+
 Apoi, teste simple care să vă obișnuiască cu modul de lucru.
 
 L1.1. Copiați (*scriind și înțelegînd*, nu copy-paste) exemplele de [aici](https://github.com/adimanea/fsa-softmat/tree/main/python/1-intro/exemple)
