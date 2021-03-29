@@ -4,6 +4,67 @@
 - Exercițiile mai simple sînt numerotate sub forma SN.M., unde M și N au același sens ca mai sus;
 - Exercițiile bonus (mai dificile) sînt numerotate sub forma BN.M.
 
+## Săptămîna 1: Setup
+Scopul principal este de instalare a uneltelor necesare:
+- limbajul (compilatorul/interpretorul etc);
+- un editor/IDE preferat.
+
+Apoi, teste simple care să vă obișnuiască cu modul de lucru.
+
+L1.1. Copiați (*scriind și înțelegînd*, nu copy-paste) exemplele de [aici](https://github.com/adimanea/fsa-softmat/tree/main/python/1-intro/exemple)
+(fișierele `exemplu1.py, ..., exemplu5.py`). 
+Citiți comentariile din cod și asigurați-vă că obțineți rezultatele corecte la ieșire.
+
+L2.1. Interacționați cu intepretorul, urmînd pașii de mai jos.
+Introduceți în terminal comanda `python`, apoi apăsați Enter. Ar trebui să vedeți
+un rezultat de forma:
+
+```
+Python 3.9.2 (default, Feb 20 2021, 18:40:11)
+[GCC 10.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> |
+```
+
+Sînteți în interpretorul interactiv Python. Acolo puteți introduce comenzi. Încercați
+diverse comenzi de forma (apăsați Enter după fiecare pentru confirmare; am inclus
+și rezultatul așteptat; liniile precedate de `>>>` sînt linii de intrare, iar liniile
+care nu au acel simbol la început sînt linii de ieșire, adică răspunsul interpretorului;
+acolo unde linia începe cu `...`, înseamnă că interpretorul încă mai așteaptă informații):
+
+```
+>>> print('a')
+a
+>>> print(5 + 12)
+17
+>>> a = 3
+>>> b = 5
+>>> print(a * b)
+15
+>>> print(f'Rezultatul produsului {a} * {b} este {a*b}')
+Rezultatul produsului 3 * 5 este 15
+>>> for i in range(5):
+...     print(i)
+...
+0
+1
+2
+3
+4
+>>> text = 'laborator'
+>>> print(f"Lungimea cuvîntului 'laborator' este {len(text)}.")
+Lungimea cuvîntului 'laborator' este 9.
+>>> lista = [1,2,3]
+>>> for i in range(7, 3, -1):
+... # adaug la listă numerele de la 7 la 4, descrescător
+...     lista.append(i)
+... 
+>>> print(lista)
+[1, 2, 3, 7, 6, 5, 4]
+```
+
+Ieșiți din interpretor apăsînd `Ctrl + d`.
+
 ## Săptămîna 2: Exerciții simple
 ### Exerciții standard
 L2.1. Se citesc de la tastatură două numere întregi.
