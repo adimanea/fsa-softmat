@@ -15,7 +15,7 @@ L1.1. Copiați (*scriind și înțelegînd*, nu copy-paste) exemplele de [aici](
 (fișierele `exemplu1.py, ..., exemplu5.py`). 
 Citiți comentariile din cod și asigurați-vă că obțineți rezultatele corecte la ieșire.
 
-L2.1. Interacționați cu intepretorul, urmînd pașii de mai jos.
+L1.2. Interacționați cu intepretorul, urmînd pașii de mai jos.
 Introduceți în terminal comanda `python`, apoi apăsați Enter. Ar trebui să vedeți
 un rezultat de forma:
 
