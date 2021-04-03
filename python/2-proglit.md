@@ -118,3 +118,6 @@ Alternativ, puteți crea un [Gist](https://gist.github.com/) sau un repository p
 
 ## Exerciții
 Pentru acest curs, de interes sînt exercițiile de [aici](https://github.com/adimanea/fsa-softmat/blob/main/python/exercitii.md#s%C4%83pt%C4%83m%C3%AEna-3-jupyter).
+
+Alte exemple aveți [aici](https://github.com/adimanea/fsa-softmat/tree/main/python/exemple-diverse/proiecte-acs-jupyter) și [aici](https://github.com/adimanea/fsa-softmat/blob/main/python/1-intro/exemple/exemplu-jupyter.ipynb).
+Le puteți descărca dînd click pe butonul **Raw**, copiați textul și le salvați cu extensia `.ipynb`. (Alternativ, folosiți `wget` în terminal.)
