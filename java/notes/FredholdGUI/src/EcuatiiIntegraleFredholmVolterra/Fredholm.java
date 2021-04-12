@@ -10,21 +10,86 @@ public abstract class Fredholm {
     protected double[][] u;
     protected double[] val;
 
-    public abstract double getA();
+    /**
+     * Getter pentru rezultatul final
+     *
+     * @return matricea U care contine rezultatele pentru fiecare iteratie
+     */
+    public double[][] getU() {
+        return u;
+    }
 
-    public abstract void setA(double a);
+    /**
+     * Getter valoare a
+     *
+     * @return capatul inferior al integralei
+     */
+    public double getA() {
+        return a;
+    }
 
-    public abstract double getB();
+    /**
+     * Setter valoare a
+     *
+     * @param a capatul inferior al integralei
+     */
+    public void setA(double a) {
+        this.a = a;
+    }
 
-    public abstract void setB(double b);
+    /**
+     * Setter valoare b
+     *
+     * @return capatul superior al integralei
+     */
+    public double getB() {
+        return b;
+    }
 
-    public abstract int getN();
+    /**
+     * Setter b
+     *
+     * @param b capatul superior al integralei
+     */
+    public void setB(double b) {
+        this.b = b;
+    }
 
-    public abstract void setN(int n);
+    /**
+     * Getter n
+     *
+     * @return numarul de iteratii
+     */
+    public int getN() {
+        return n;
+    }
 
-    public abstract int getI();
+    /**
+     * Setter n
+     *
+     * @param n numarul de iteratii
+     */
+    public void setN(int n) {
+        this.n = n;
+    }
 
-    public abstract void setI(int i);
+    /**
+     * Getter i
+     *
+     * @return numarul de pasi
+     */
+    public int getI() {
+        return i;
+    }
+
+    /**
+     * Setter i
+     *
+     * @param i numarul de pasi
+     */
+    public void setI(int i) {
+        this.i = i;
+    }
 
 
 }

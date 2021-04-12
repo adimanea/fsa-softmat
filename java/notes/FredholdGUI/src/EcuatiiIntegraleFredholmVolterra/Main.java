@@ -22,7 +22,7 @@ public class Main extends Application {
         fredholmSpetaUnu.calculareTotala();
 
 
-        stage.setTitle("Ecuatie FredholmSpetaUnu");
+        stage.setTitle("Ecuatie Fredholm Speta Unu");
         //defining the axes
         final NumberAxis xAxis = new NumberAxis();
         final NumberAxis yAxis = new NumberAxis();
@@ -31,7 +31,7 @@ public class Main extends Application {
         final LineChart<Number, Number> lineChart =
                 new LineChart<Number, Number>(xAxis, yAxis);
 
-        lineChart.setTitle("Ecuatie FredholmSpetaUnu");
+        lineChart.setTitle("Ecuatie Fredholm Speta Unu");
 
         ArrayList<XYChart.Series> s = new ArrayList<XYChart.Series>();
 
