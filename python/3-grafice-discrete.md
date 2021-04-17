@@ -68,3 +68,6 @@ de tipul "P% din datele culese arată A, Q% arată B etc.".
 Vom exemplifica toate aceste tipuri de grafice în laborator. Pentru partea de Python, vom folosi
 biblioteca `matplotlib`, integrată în foi Jupyter. Seturile de date, deocamdată, pot fi fictive,
 date la intrare ca liste sau generate aleatoriu cu diverse proceduri.
+
+Foaia de laborator este [aici](https://github.com/adimanea/fsa-softmat/blob/main/python/3-grafice-discrete.ipynb),
+iar lista actualizată de exerciții este [aici](https://github.com/adimanea/fsa-softmat/blob/main/python/exercitii.md#s%C4%83pt%C4%83m%C3%AEna-5-grafice-discrete).
