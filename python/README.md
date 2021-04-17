@@ -19,3 +19,4 @@ Ele oferă introducerea teoretică minimală pe a căror cunoaștere se bazează
 
 - [Curs 1: Introducere și setup](https://github.com/adimanea/fsa-softmat/blob/main/python/1-intro/README.org);
 - [Curs 2: Programare literată](https://github.com/adimanea/fsa-softmat/blob/main/python/2-proglit.md);
+- [Curs 3: Grafice discrete](https://github.com/adimanea/fsa-softmat/blob/main/python/3-grafice-discrete.md);
