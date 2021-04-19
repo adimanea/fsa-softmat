@@ -27,7 +27,7 @@ si citire a celor 3 campuri. Va rog sa instantiati 2 obiecte din clasa `Automobi
 afisati caracteristicile folosind metodele declarate.
 
 J8. Va rog sa setati caracteristicile si metodele de setare si citire pentru clasa fiu `MountainBike` 
-a clasei parinte `Bicycle` asa cum a fost definita in Laboratorul 4.
+a clasei parinte `Bicycle` asa cum a fost definita in [Laboratorul 4](https://github.com/adimanea/fsa-softmat/blob/main/java/notes/Laborator%20si%20seminar%204-v2.0.pdf).
 
 J9. Va rog sa definiti Pachetul `Lab4` continand Interfata `Book` si Clasele `BookDemo` si `AudioBook` 
 pe care sa le folositi din exteriorul Pachetului instantiind 2 obiecte de tip `BookDemo` si `AudioBook`
