@@ -1,11 +1,13 @@
 package EcuatiiIntegraleFredholmVolterra;
 
 
+import java.util.LinkedList;
+
 /**
  * Aceasta clasa ofera o metoda de rezolvare
  * a ecuatiei Fredholm de speta I
  */
-public class FredholmSpetaUnu extends Fredholm {
+public class FredholmSpetaUnu extends FredholmVolttera {
 
     /**
      * Constructorul implicit pentru ecuatia FredholmSpetaUnu
@@ -16,9 +18,6 @@ public class FredholmSpetaUnu extends Fredholm {
         n = 5;
         i = 100;
         h = (b - a) / i;
-        x = new double[i + 1];
-        u = new double[n + 1][i + 1];
-        val = new double[i + 1];
     }
 
     /**
@@ -42,9 +41,9 @@ public class FredholmSpetaUnu extends Fredholm {
      * @see EcuatiiIntegraleFredholmVolterra.Ecuatie#f(double)
      */
     private void initializareX() {
-        x[0] = a;
+        x.add(0, a);
         for (int counter = 0; counter < i; ++counter) {
-            x[counter + 1] = x[counter] + h;
+            x.add(counter + 1, x.get(counter) + h);
         }
     }
 
@@ -54,9 +53,11 @@ public class FredholmSpetaUnu extends Fredholm {
      * @see EcuatiiIntegraleFredholmVolterra.Ecuatie#f(double)
      */
     private void initializareU() {
+        LinkedList<Double> lista = new LinkedList<Double>();
         for (int counter = 0; counter < i; ++counter) {
-            u[0][counter] = Ecuatie.f(x[counter]);
+            lista.add(Ecuatie.f(x.get(counter)));
         }
+        u.add(lista);
     }
 
     /**
@@ -68,14 +69,16 @@ public class FredholmSpetaUnu extends Fredholm {
      */
     private void calculRezultat() {
         for (int counter1 = 0; counter1 < n; ++counter1) {
+            LinkedList<Double> lista = new LinkedList<Double>();
             for (int counter2 = 0; counter2 < i; ++counter2) {
+                LinkedList<Double> Val = new LinkedList<Double>();
                 for (int counter3 = 0; counter3 < i; ++counter3) {
-                    val[counter3] = Nucleu.k(x[counter2], x[counter3]) * u[counter1][counter3];
+                    Val.add(Nucleu.k(x.get(counter2), x.get(counter3)) * u.get(counter1).get(counter3));
                 }
-                u[counter1 + 1][counter2] = trapz(x[counter2], val[counter2]) + Ecuatie.f(x[counter2]);
+                lista.add(trapz(x.get(counter2), Val.get(counter2)) + Ecuatie.f(x.get(counter2)));
             }
+            u.add(lista);
         }
-
     }
 
     /**

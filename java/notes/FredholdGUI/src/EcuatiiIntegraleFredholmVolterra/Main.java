@@ -7,7 +7,8 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Main extends Application {
 
@@ -17,31 +18,27 @@ public class Main extends Application {
         FredholmSpetaUnu fredholmSpetaUnu = new FredholmSpetaUnu();
 
 
-        double[][] u;
-        u = fredholmSpetaUnu.getU();
         fredholmSpetaUnu.calculareTotala();
 
 
         stage.setTitle("Ecuatie Fredholm Speta Unu");
-        //defining the axes
+
         final NumberAxis xAxis = new NumberAxis();
         final NumberAxis yAxis = new NumberAxis();
         xAxis.setLabel("Numar iteratii");
-        //creating the chart
+
         final LineChart<Number, Number> lineChart =
                 new LineChart<Number, Number>(xAxis, yAxis);
 
         lineChart.setTitle("Ecuatie Fredholm Speta Unu");
 
-        ArrayList<XYChart.Series> s = new ArrayList<XYChart.Series>();
+        List<XYChart.Series> s = new LinkedList<XYChart.Series>();
 
         for (int i = 0; i < fredholmSpetaUnu.getN(); ++i) {
-            //defining a series
             XYChart.Series series = new XYChart.Series();
-            series.setName("Iteratia " + Integer.toString(i + 1));
+            series.setName("Iteratia " + (i + 1));
             for (int j = 0; j < fredholmSpetaUnu.getI(); ++j) {
-                series.getData().add(new XYChart.Data(j + 1, u[i][j]));
-                //populating the series with data
+                series.getData().add(new XYChart.Data(j + 1, fredholmSpetaUnu.getU().get(i).get(j)));
             }
             s.add(series);
         }

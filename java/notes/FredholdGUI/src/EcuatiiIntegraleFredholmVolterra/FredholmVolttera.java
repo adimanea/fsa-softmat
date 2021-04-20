@@ -1,21 +1,22 @@
 package EcuatiiIntegraleFredholmVolterra;
 
-public abstract class Fredholm {
+import java.util.LinkedList;
+
+public abstract class FredholmVolttera {
     protected double a;
     protected double b;
     protected int n;
     protected int i;
     protected double h;
-    protected double[] x;
-    protected double[][] u;
-    protected double[] val;
+    protected LinkedList<Double> x = new LinkedList<Double>();
+    protected LinkedList<LinkedList<Double>> u = new LinkedList<LinkedList<Double>>();
 
     /**
      * Getter pentru rezultatul final
      *
      * @return matricea U care contine rezultatele pentru fiecare iteratie
      */
-    public double[][] getU() {
+    public LinkedList<LinkedList<Double>> getU() {
         return u;
     }
 
