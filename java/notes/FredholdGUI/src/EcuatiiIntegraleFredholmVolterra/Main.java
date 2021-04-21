@@ -15,10 +15,10 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
 
-        FredholmSpetaUnu fredholmSpetaUnu = new FredholmSpetaUnu();
+        //FredholmSpetaUnu fredholmSpetaUnu = new FredholmSpetaUnu();
+        Volttera volttera = new Volttera();
 
-
-        fredholmSpetaUnu.calculareTotala();
+        volttera.calculareTotala();
 
 
         stage.setTitle("Ecuatie Fredholm Speta Unu");
@@ -34,18 +34,18 @@ public class Main extends Application {
 
         List<XYChart.Series> s = new LinkedList<XYChart.Series>();
 
-        for (int i = 0; i < fredholmSpetaUnu.getN(); ++i) {
+        for (int i = 0; i < volttera.getN(); ++i) {
             XYChart.Series series = new XYChart.Series();
             series.setName("Iteratia " + (i + 1));
-            for (int j = 0; j < fredholmSpetaUnu.getI(); ++j) {
-                series.getData().add(new XYChart.Data(j + 1, fredholmSpetaUnu.getU().get(i).get(j)));
+            for (int j = 0; j < volttera.getI(); ++j) {
+                series.getData().add(new XYChart.Data(j + 1, volttera.getU().get(i).get(j)));
             }
             s.add(series);
         }
 
 
         Scene scene = new Scene(lineChart, 800, 600);
-        for (int i = 0; i < fredholmSpetaUnu.getN(); ++i) {
+        for (int i = 0; i < volttera.getN(); ++i) {
             lineChart.getData().addAll(s.get(i));
         }
 
