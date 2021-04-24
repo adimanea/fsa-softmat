@@ -100,3 +100,6 @@ with open('orase_carti.csv', 'w+') as csv_file:
 - Un alt tutorial este [aici](https://www.geeksforgeeks.org/working-csv-files-python/) (vedeți și sugestiile din partea de jos a paginii);
 - Un modul mai puternic, în special pentru data science, este `pandas`, cu site-ul [aici](https://pandas.pydata.org/), documentația oficială [aici](https://pandas.pydata.org/docs/) (puteți căuta după "csv" și găsiți, de exemplu, [funcțiile de citire](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html?highlight=csv#pandas.read_csv));
     + Un tutorial simplu de Pandas CSV este [aici](https://www.journaldev.com/29055/python-pandas-module-tutorial) sau [aici](https://realpython.com/python-csv/).
+  
+## Exerciții suplimentare
+[Aici](https://github.com/adimanea/fsa-softmat/blob/main/python/exercitii.md#s%C4%83pt%C4%83m%C3%AEna-6-grafice-discrete-%C8%99i-csv-parsing)
