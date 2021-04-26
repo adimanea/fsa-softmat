@@ -67,12 +67,24 @@ import csv
 
 with open('myData.csv', 'r') as csv_file:
     readData = csv.reader(csv_file)
+    # acum avem în lista readData toate elementele, pe care le putem accesa linie cu linie
+    # atenție! readData este in scope doar în interiorul acestui bloc `with'
+    for row in readData:
+        print(row)
     csv_file.close()
-
-# acum avem în lista readData toate elementele, pe care le putem accesa linie cu linie
-for row in readData:
-    print(row)
 ```
+
+**Atenție:** În versiunea de mai sus, programul nu știe să utilizeze codarea UTF-8,
+astfel că dacă aveți informații cu diacritice, for fi afișate greșit.
+
+Pentru utilizarea codării UTF-8, folosim sintaxa:
+
+```python
+with open('myData.csv', 'r', encoding='utf-8') as csv_file:
+    # ...
+```
+
+O sintaxă similară poate fi folosită și pentru scriere.
 
 Putem și scrie un fișier CSV dintr-o listă de date (de exemplu, tabelul de mai sus cu orașe și numere):
 
