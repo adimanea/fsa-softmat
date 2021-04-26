@@ -453,3 +453,37 @@ pentru 1000 de valori aleatoare ale lui `n`, *diferite*. Exemplu: în cazul de m
 - Reprezentați grafic pe un pie chart procentele dintre numerele care au necesitat între 1 și 100 de pași Collatz, între 101 și 200, între 201 și 300 etc., pînă la valoarea maximă din setul de date generat.
 
 **Bonus** pentru oricare dintre exercițiile de mai sus dacă folosiți stilizări diverse: culori nestandard, modele, legende plasate non-standard, grid-uri, fonturi speciale etc.
+
+## Săptămîna 6: Grafice discrete și CSV parsing
+L6.1. Scrieți un fișier CSV folosind modulul specific, care să conțină cel puțin 3 liste
+(corespunzătoare unui cap de tabel și două linii). Exemplu:
+- `cap_tabel = ["nr_crt", "oraș/sector", "nota_parcuri", "nota_parcări", "nota_trafic", "nota_trotuar", "nota_borduri"]`
+- `rasp_b = ["1", "B, Sector 3", "5", "8", "3", "10", "7"]`;
+- `rasp_ct = ["2", "CT", "5", "7", "10", "3", "8"]`
+
+Apoi reprezentați grafic pe o histogramă care să conțină alăturat datele pentru cele două orașe.
+Opțional, trasați și cîte o orizontală care să arate media notelor.
+
+L6.2. Refaceți oricare dintre exercițiile laboratorului anterior, folosind scriere sau citire
+în și din fișiere CSV. Exemple:
+- L5.3.: puteți scrie cele două liste `X` și `Y` într-un CSV, cu 2 coloane și 10 linii;
+- L5.4.: puteți scrie tripletele în trei liste `sex, vîrstă, nr_cărți` într-un CSV cu 3 coloane și 10 linii;
+- L5.5.: puteți reface tabelul într-un CSV, cu listele `nr_rasp, gen_muzical`, apoi le scrieți într-un CSV cu 2 coloane și 7 linii;
+- B5.1.: puteți scrie datele generate într-un CSV, de forma `input, pasiCollatz(input)`, cu 2 coloane și 1000 linii.
+
+L6.3. Preluați seturi de date de pe Internet în format CSV și realizați reprezentări grafice relevante.
+Exemple:
+- [Coronavirus Source Data](https://ourworldindata.org/coronavirus-source-data). Grafice posibile:
+  + evoluția cazurilor noi într-o lună, pentru o țară fixată;
+  + evoluția numărului total de vaccinări într-o lună, pentru o țară fixată;
+  + pentru un set de cîteva (8-10 cel puțin) țări, media vaccinărilor într-o lună fixată;
+ 
+- [Project datasets](https://perso.telecom-paristech.fr/eagan/class/igr204/datasets). Grafice posibile:
+  + Alegeți o caracteristică nutritivă (e.g. proteine) și reprezentați grafic conținutul acelei caracteristici pentru tipurile de cereale incluse în CSV;
+  + Evoluția lungimii filmelor versus data lansării;
+  + Pie chart cu procentele de actori principali masculini/feminini pentru un deceniu.
+ 
+- [CORGIS](https://corgis-edu.github.io/corgis/csv/). Grafice posibile:
+  + Încasările medii pentru musical vs piese de teatru [de pe Broadway](https://corgis-edu.github.io/corgis/csv/broadway/) într-un pie chart;
+  + Evoluția [temperaturii medii, minime, maxime](https://corgis-edu.github.io/corgis/csv/weather/) dintr-un stat din SUA;
+  + Evoluția [vînzărilor de carte de pe Amazon](https://corgis-edu.github.io/corgis/csv/publishers/).
