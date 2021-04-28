@@ -1,15 +1,15 @@
 package PachetTeme;
 
 public class Ex2 {
-    protected String[] Materii = new String[10];
+    protected String[] materii = new String[10];
 
     public Ex2(String[] materii) {
-        Materii = materii;
+        this.materii = materii;
     }
 
-    public void PrintareIndex() {
-        for (int i = 0; i < Materii.length; ++i) {
-            if (Materii[i] == "Programare java si software matematic") {
+    public void printareIndex() {
+        for (int i = 0; i < materii.length; ++i) {
+            if (materii[i] == "Programare java si software matematic") {
                 System.out.println("Pozitia Programare java si software matematic este " + i);
             }
         }

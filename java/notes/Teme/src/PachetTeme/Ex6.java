@@ -5,15 +5,15 @@ public class Ex6 extends Ex3 {
         super(numere);
     }
 
-    public void SumaImpare() {
+    public void sumaImpare() {
         int i = 0;
-        Integer SumaImpare = 0;
+        Integer sumaImpare = 0;
         do {
-            if (Numere[i] % 2 != 0) {
-                SumaImpare += Numere[i];
+            if (numere[i] % 2 != 0) {
+                sumaImpare += numere[i];
             }
             ++i;
-        } while (i < Numere.length);
-        System.out.println("Suma imparelor este " + SumaImpare);
+        } while (i < numere.length);
+        System.out.println("Suma imparelor este " + sumaImpare);
     }
 }

@@ -1,18 +1,18 @@
 package PachetTeme;
 
 public class Persoana {
-    protected String Nume;
-    protected int Varsta;
+    protected String nume;
+    protected int varsta;
     protected long CNP;
 
-    public Persoana(String Nume, int Varsta, long CNP) {
-        this.Nume = Nume;
-        this.Varsta = Varsta;
+    public Persoana(String nume, int varsta, long CNP) {
+        this.nume = nume;
+        this.varsta = varsta;
         this.CNP = CNP;
     }
 
-    public void Printare() {
-        System.out.println("Ma cheama " + Nume + ", am " + Varsta + " ani, iar CNP-ul meu este " + CNP);
+    public void printare() {
+        System.out.println("Ma cheama " + nume + ", am " + varsta + " ani, iar CNP-ul meu este " + CNP);
     }
 
 }

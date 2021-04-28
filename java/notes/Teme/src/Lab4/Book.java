@@ -3,16 +3,16 @@ package Lab4;
 //definim interfata Book
 
 public interface Book {
-    public String getTitle();
+    String getTitle();
 
-    public void setTitle(String _title);
+    void setTitle(String _title);
 
-    public int getPubYear();
+    int getPubYear();
 
-    public void setPubYear(int _pubYear);
+    void setPubYear(int _pubYear);
 
-    public String getAuthor();
+    String getAuthor();
 
-    public void setAuthor(String _Author);
+    void setAuthor(String _Author);
 
 }

@@ -5,13 +5,13 @@ public class Ex5 extends Ex3 {
         super(numere);
     }
 
-    public void PrintareSuma() {
+    public void printareSuma() {
         int i = 0;
-        Integer Suma = 0;
-        while (i < Numere.length) {
-            Suma += Numere[i];
+        Integer suma = 0;
+        while (i < numere.length) {
+            suma += numere[i];
             ++i;
         }
-        System.out.println("Suma este " + Suma);
+        System.out.println("Suma este " + suma);
     }
 }

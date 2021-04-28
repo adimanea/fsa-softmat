@@ -1,26 +1,22 @@
 package PachetTeme;
 
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Ex10 {
     protected char[] cuvant = new char[100];
-    protected int lungime;
+    protected int lungime = 0;
 
-    public Ex10() throws IOException {
-        InputStreamReader reader = null;
+    public Ex10() {
+        Scanner console = new Scanner(System.in);
         System.out.println("Dati lungimea");
-        try {
-            reader = new InputStreamReader(System.in);
-            lungime = reader.read();
-            for (int i = 0; i < lungime; ++i) {
-                cuvant[i] = (char) reader.read();
-                System.out.println(cuvant[i]);
-            }
-        } finally {
-            if (reader != null) {
-                reader.close();
-            }
-        }
+        lungime = console.nextInt();
+        System.out.println(lungime);
+        int i = 0;
+        do {
+            cuvant[i] = console.next().charAt(0);
+            System.out.println(cuvant[i]);
+            ++i;
+        } while (i < lungime);
     }
 }
+

@@ -1,29 +1,29 @@
 package PachetTeme;
 
 public class Ex3 {
-    protected Integer[] Numere;
+    protected Integer[] numere;
 
     public Ex3(Integer[] numere) {
-        Numere = numere;
+        this.numere = numere;
     }
 
-    private int Maxim() {
-        int maxim = Integer.MIN_VALUE;
-        for (int i = 0; i < Numere.length; ++i) {
-            maxim = Math.max(maxim, Numere[i]);
+    private int maxim() {
+        int valoareMaxima = Integer.MIN_VALUE;
+        for (int i = 0; i < numere.length; ++i) {
+            valoareMaxima = Math.max(valoareMaxima, numere[i]);
         }
-        return maxim;
+        return valoareMaxima;
     }
 
-    private int Minim() {
-        int minim = Integer.MAX_VALUE;
-        for (int i = 0; i < Numere.length; ++i) {
-            minim = Math.min(minim, Numere[i]);
+    private int minim() {
+        int valoareMinima = Integer.MAX_VALUE;
+        for (int i = 0; i < numere.length; ++i) {
+            valoareMinima = Math.min(valoareMinima, numere[i]);
         }
-        return minim;
+        return valoareMinima;
     }
 
     public void PrintareMaximMinim() {
-        System.out.println("Maximul este " + Maxim() + ", iar minimul este " + Minim());
+        System.out.println("Maximul este " + maxim() + ", iar minimul este " + minim());
     }
 }

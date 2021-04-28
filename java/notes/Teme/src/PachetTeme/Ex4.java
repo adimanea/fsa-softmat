@@ -6,8 +6,8 @@ public class Ex4 extends Ex3 {
         super(numere);
     }
 
-    public void PrintarePare() {
-        for (int item : Numere) {
+    public void printarePare() {
+        for (int item : numere) {
             if (item % 2 == 0) {
                 System.out.println(item);
             }

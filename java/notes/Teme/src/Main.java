@@ -3,13 +3,12 @@ import Lab4.Book;
 import Lab4.BookDemo;
 import PachetTeme.*;
 
-import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Persoana eu = new Persoana("Marius", 25, 2890523528181L);
-        eu.Printare();
+        eu.printare();
         System.out.println('\n');
 
         Ex2 ex2 = new Ex2(new String[]{
@@ -18,7 +17,7 @@ public class Main {
                 "Programare java si software matematic",
                 "Metodologia cercetarii stiintifice",
                 "Limbaje de programare pentru aplicatii pe internet"});
-        ex2.PrintareIndex();
+        ex2.printareIndex();
         System.out.println('\n');
 
         Integer[] vectorNumere = new Integer[]{
@@ -29,15 +28,15 @@ public class Main {
         System.out.println('\n');
 
         Ex4 ex4 = new Ex4(vectorNumere);
-        ex4.PrintarePare();
+        ex4.printarePare();
         System.out.println('\n');
 
         Ex5 ex5 = new Ex5(vectorNumere);
-        ex5.PrintareSuma();
+        ex5.printareSuma();
         System.out.println('\n');
 
         Ex6 ex6 = new Ex6(vectorNumere);
-        ex6.SumaImpare();
+        ex6.sumaImpare();
         System.out.println('\n');
 
         Automobil masina = new Automobil();
