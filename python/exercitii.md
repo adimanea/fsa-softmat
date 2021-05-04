@@ -487,3 +487,36 @@ Exemple:
   + Încasările medii pentru musical vs piese de teatru [de pe Broadway](https://corgis-edu.github.io/corgis/csv/broadway/) într-un pie chart;
   + Evoluția [temperaturii medii, minime, maxime](https://corgis-edu.github.io/corgis/csv/weather/) dintr-un stat din SUA;
   + Evoluția [vînzărilor de carte de pe Amazon](https://corgis-edu.github.io/corgis/csv/publishers/).
+
+## Săptămîna 7: Grafice continue bidimensionale
+L7.1. Înainte de exercițiile propriu-zise, citiți și înțelegeți exemple precum:
+- [alegerea mărimii (sub)figurilor](https://matplotlib.org/stable/gallery/subplots_axes_and_figures/figure_size_units.html#sphx-glr-gallery-subplots-axes-and-figures-figure-size-units-py);
+- [indicatori pe grafic](https://matplotlib.org/stable/gallery/pyplots/annotation_basic.html#sphx-glr-gallery-pyplots-annotation-basic-py);
+- [text matematic pe grafic](https://matplotlib.org/stable/gallery/pyplots/pyplot_mathtext.html#sphx-glr-gallery-pyplots-pyplot-mathtext-py); și [alt exemplu, mai complex](https://matplotlib.org/stable/gallery/text_labels_and_annotations/tex_demo.html#sphx-glr-gallery-text-labels-and-annotations-tex-demo-py);
+- [aria între două grafice](https://matplotlib.org/stable/gallery/pyplots/whats_new_98_4_fill_between.html#sphx-glr-gallery-pyplots-whats-new-98-4-fill-between-py);
+- [rotirea textului, să se potrivească pe grafic](https://matplotlib.org/stable/gallery/text_labels_and_annotations/text_rotation_relative_to_line.html#sphx-glr-gallery-text-labels-and-annotations-text-rotation-relative-to-line-py);
+- [opțiuni pentru poziționarea titlului](https://matplotlib.org/stable/gallery/text_labels_and_annotations/titles_demo.html#sphx-glr-gallery-text-labels-and-annotations-titles-demo-py);
+- [plasarea precisă a etichetelor](https://matplotlib.org/stable/gallery/text_labels_and_annotations/text_alignment.html#sphx-glr-gallery-text-labels-and-annotations-text-alignment-py);
+- [adnotări precise](https://matplotlib.org/stable/gallery/text_labels_and_annotations/annotation_demo.html#sphx-glr-gallery-text-labels-and-annotations-annotation-demo-py);
+- [aceeași axă OX pentru mai multe subgrafice](https://matplotlib.org/stable/gallery/subplots_axes_and_figures/shared_axis_demo.html#sphx-glr-gallery-subplots-axes-and-figures-shared-axis-demo-py);
+- [alinierea etichetelor](https://matplotlib.org/stable/gallery/subplots_axes_and_figures/align_labels_demo.html#sphx-glr-gallery-subplots-axes-and-figures-align-labels-demo-py);
+
+L7.2. Reprezentați pe același desen, folosind culori diferite și linii de stiluri diferite, pentru `x = np.arange(-5, 5, 100)` funcțiile `sin(x), exp(x), x**2, x**(1/3)`. Plasați legenda pe grafic și ajustați axa OY astfel încît să se poată vedea toate valorile.
+
+L7.3. Reprezentați pe același desen, folosind culori diferite, pentru `x = np.arange(-1, 1, 1000)` funcțiile `f = x**2` și `g = x**4`. Colorați porțiunile dintre grafice unde `f > g`.
+
+L7.4. Verificați grafic dacă punctele de coordonate `(-1, 3), (2, 1), (0, 2), (1, 1)` se găsesc pe graficul funcției `f(x) = x**2 - 5*x + 3`.
+
+L7.5. Găsiți punctele de intersecție între graficele funcțiilor `f(x) = 3x - 1` și `g(x) = x**2 + x - 2`.
+
+L7.6. Rezolvați grafic ecuația `x**2 - 5*x + 6 = 0` (i.e. arătați punctele de intersecție între graficul funcției și axa OX).
+
+L7.7. Aceeași cerință pentru ecuația `sin(x**2) = cos(x)**3`, pentru `x = np.arange(-2*np.pi, 2*np.pi, 1000)`.
+
+L7.8. Reprezentați grafic funcția `f(x) = sin(x**2)**3`, pentru `x = np.arange(-np.pi, np.pi, 1000)` și colorați cu albastru zona de sub grafic aflată deasupra axei OX și cu roșu zona de deasupra graficului aflată sub axa OX.
+
+B7.1. Reprezentați grafic tangenta la graficul funcției `f(x) = x**3 - 5x**2 + 7*x - 1` în punctul de abscisă `x = 0.3`.
+
+B7.2. Scrieți un program (sau foaie Jupyter) care să citească de la tastatură coeficienții `a, b, c` ai unei funcții de gradul doi de forma `f(x) = a*x**2 + b*x + c` și coeficienții `m, n` ai unei funcții de gradul întîi. Reprezentați grafic funcțiile respective, pentru un domeniu ales de utilizator, de forma `x = np.arange(start, stop, 1000)` (cu `start` și `stop` introduse de la tastatură) și găsiți punctele de intersecție între grafice (dacă există).
+
+**OBSERVAȚIE:** Vă puteți verifica graficele și calculele folosind [GeoGebra](https://www.geogebra.org/calculator).
