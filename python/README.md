@@ -21,4 +21,5 @@ Ele oferă introducerea teoretică minimală pe a căror cunoaștere se bazează
 - [Curs 2: Programare literată](https://github.com/adimanea/fsa-softmat/blob/main/python/2-proglit.md);
 - [Curs 3: Grafice discrete](https://github.com/adimanea/fsa-softmat/blob/main/python/3-grafice-discrete.md);
 - [Curs 4: CSV Parsing pentru grafice discrete](https://github.com/adimanea/fsa-softmat/blob/main/python/4-csv.md)
-- [Curs 5: Grafice continue bidimensionale](https://github.com/adimanea/fsa-softmat/blob/main/python/5-2d.md)
+- [Curs 5: Grafice continue bidimensionale](https://github.com/adimanea/fsa-softmat/blob/main/python/5-2d.md);
+- [Curs 6: Elemente de statistică](https://github.com/adimanea/fsa-softmat/blob/main/python/6-stat.md).
