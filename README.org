@@ -36,13 +36,14 @@ Orice alte unelte de programare pot fi folosite, cu rezerva unui suport limitat 
 3. Grafice 2D continue:
 	 - rezolvarea grafică a ecuațiilor de forma ~f(x) = 0~, unde ~f~ este o funcție reală cunoscută;
 	 - interpretarea comportamentului și evoluției unei funcții în raport cu modificarea parametrilor (monotonie, extreme etc.);
-4. Cîmpuri vectoriale și heatmaps:
-	 - interpretarea grafică a datelor distribuite într-un plan (e.g. pe hărți);
-	 - calcule și interpretări ale operatorilor diferențiali pe astfel de date (gradient, divergență, rotor);
+4. Elemente de statistică:
+     - calcul de medie, mediană, mod, abatere standard pe seturi de date.
+
++4. Cîmpuri vectoriale și heatmaps:+
+	 +- interpretarea grafică a datelor distribuite într-un plan (e.g. pe hărți);+
+	 +- calcule și interpretări ale operatorilor diferențiali pe astfel de date (gradient, divergență, rotor);+
 +5. Grafice 3D:+
 	 +- interpretarea grafică a problemelor de analiză tridimensională (vizualizarea intersecțiilor între suprafețe, a volumului delimitat etc.).+
-5. Elemente de statistică:
-     - calcul de medie, mediană, mod, abatere standard pe seturi de date.
 
 ** Opțional
 În funcție de evoluția activităților și de feedback, se pot adăuga și următoarele conținuturi:
