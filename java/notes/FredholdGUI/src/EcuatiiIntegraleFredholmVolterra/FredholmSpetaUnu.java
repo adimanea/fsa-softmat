@@ -15,9 +15,9 @@ public class FredholmSpetaUnu extends FredholmVolttera {
     public FredholmSpetaUnu() {
         a = 0;
         b = Math.PI;
-        n = 5;
+        n = 10;
         i = 100;
-        h = (b - a) / i;
+        h = (b - a) / (double) i;
     }
 
     /**
@@ -42,8 +42,11 @@ public class FredholmSpetaUnu extends FredholmVolttera {
      */
     private void initializareX() {
         x.add(0, a);
-        for (int counter = 0; counter < i; ++counter) {
-            x.add(counter + 1, x.get(counter) + h);
+        double e = h;
+        for (int counter = 1; counter < i; ++counter) {
+            x.add(counter, e);
+            e += h;
+            System.out.println(x.get(counter));
         }
     }
 
@@ -55,7 +58,7 @@ public class FredholmSpetaUnu extends FredholmVolttera {
     private void initializareU() {
         LinkedList<Double> lista = new LinkedList<Double>();
         for (int counter = 0; counter < i; ++counter) {
-            lista.add(Ecuatie.f(x.get(counter)));
+            lista.add(counter, Ecuatie.f(x.get(counter)));
         }
         u.add(lista);
     }
@@ -73,11 +76,11 @@ public class FredholmSpetaUnu extends FredholmVolttera {
             for (int counter2 = 0; counter2 < i; ++counter2) {
                 LinkedList<Double> Val = new LinkedList<Double>();
                 for (int counter3 = 0; counter3 < i; ++counter3) {
-                    Val.add(Nucleu.k(x.get(counter2), x.get(counter3)) * u.get(counter1).get(counter3));
+                    Val.set(counter3, Nucleu.k(x.get(counter2), x.get(counter3)) * u.get(counter1).get(counter3));
                 }
-                lista.add(trapz(x.get(counter2), Val.get(counter2)) + Ecuatie.f(x.get(counter2)));
+                lista.set(counter2, trapz(x.get(counter2), Val.get(counter2)) + Ecuatie.f(x.get(counter2)));
             }
-            u.add(lista);
+            u.set(counter1, lista);
         }
     }
 

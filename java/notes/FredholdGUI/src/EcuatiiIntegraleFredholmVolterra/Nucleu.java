@@ -13,6 +13,7 @@ public class Nucleu {
      */
     public static double k(double x, double y) {
         /* p=x*y/25; */
-        return (x * y / 50);
+        //return (x * y / 50);
+        return Math.sin(x - y);
     }
 }
