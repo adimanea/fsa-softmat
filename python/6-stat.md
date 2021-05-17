@@ -59,6 +59,6 @@ Valorile pot fi verificate folosind Excel și formulele:
 - `STDEV.P` returnează abaterea standard (`STDEV.P(A1:A10)`).
 
 ## Resurse suplimentare
-- Foaie Excel cu exemple (**TBA**);
-- Foaie Jupyter cu calcule Python, împreună cu grafice (**TBA**);
+- Foaie Excel cu exemple [aici (CSV)](cars.csv) și [aici (XLSX)](cars.xlsx) (vedeți coloanele colorate cu galben, au fost adăugate pe baza foii CSV inițiale. Click pe elementele din coloană pentru a vedea formula aplicată);
+- Foaie Jupyter cu calcule Python, împreună cu grafice [aici](6-stat.ipynb)
 - Exerciții (**TBA**).
