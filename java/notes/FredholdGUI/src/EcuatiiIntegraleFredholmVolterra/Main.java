@@ -1,58 +1,33 @@
 package EcuatiiIntegraleFredholmVolterra;
 
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
-import java.util.LinkedList;
-import java.util.List;
-
+/**
+ * Clasa principala Main
+ */
 public class Main extends Application {
 
+    /**
+     * Functia de afisare a graficului din JavaFX
+     * @param stage
+     */
     @Override
     public void start(Stage stage) {
 
-        //FredholmSpetaUnu fredholmSpetaUnu = new FredholmSpetaUnu();
-        Volttera volttera = new Volttera();
+        FredholmSpetaDoi fredholmSpetaDoi = new FredholmSpetaDoi();
+        fredholmSpetaDoi.calculareTotala();
+        Utilitar.afisareGrafic(stage, fredholmSpetaDoi, "Ecuatie Fredholm Speta Doi");
 
+        /*Volttera volttera = new Volttera();
         volttera.calculareTotala();
-
-
-        stage.setTitle("Ecuatie Fredholm Speta Unu");
-
-        final NumberAxis xAxis = new NumberAxis();
-        final NumberAxis yAxis = new NumberAxis();
-        xAxis.setLabel("Numar iteratii");
-
-        final LineChart<Number, Number> lineChart =
-                new LineChart<Number, Number>(xAxis, yAxis);
-
-        lineChart.setTitle("Ecuatie Fredholm Speta Unu");
-
-        List<XYChart.Series> s = new LinkedList<XYChart.Series>();
-
-        for (int i = 0; i < volttera.getN(); ++i) {
-            XYChart.Series series = new XYChart.Series();
-            series.setName("Iteratia " + (i + 1));
-            for (int j = 0; j < volttera.getI(); ++j) {
-                series.getData().add(new XYChart.Data(j + 1, volttera.getU().get(i).get(j)));
-            }
-            s.add(series);
-        }
-
-
-        Scene scene = new Scene(lineChart, 800, 600);
-        for (int i = 0; i < volttera.getN(); ++i) {
-            lineChart.getData().addAll(s.get(i));
-        }
-
-        stage.setScene(scene);
-        stage.show();
+        Utilitar.afisareGrafic(stage, volttera, "Ecuatie Volttera");*/
     }
 
+    /**
+     * Functia principala main
+     * @param args argumentele functiei main
+     */
     public static void main(String[] args) {
         launch(args);
     }

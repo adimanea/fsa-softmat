@@ -1,34 +1,34 @@
 package EcuatiiIntegraleFredholmVolterra;
 
-
 import java.util.LinkedList;
 
 /**
- * Aceasta clasa ofera o metoda de rezolvare
- * a ecuatiei Fredholm de speta I
+ * Aceasta clasa ofera o metoda de rezolvare a ecuatiei Fredholm de speta II
  */
-public class FredholmSpetaUnu extends FredholmVolttera {
+public class FredholmSpetaDoi extends FredholmVolttera {
+
+    private LinkedList<Double> Val;
 
     /**
-     * Constructorul implicit pentru ecuatia FredholmSpetaUnu
+     * Constructorul implicit pentru ecuatia FredholmSpetaDoi
      */
-    public FredholmSpetaUnu() {
+    public FredholmSpetaDoi() {
         a = 0;
         b = Math.PI;
-        n = 10;
-        i = 100;
+        n = 5;
+        i = 10;
         h = (b - a) / (double) i;
     }
 
     /**
-     * Constructorul explicit pentru ecuatia FredholmSpetaUnu
+     * Constructorul explicit pentru ecuatia FredholmSpetaDoi
      *
      * @param a capatul inferior al integralei
      * @param b capatul superior al integralei
      * @param n numarul de iteratii
      * @param i numarul de pasi
      */
-    public FredholmSpetaUnu(double a, double b, int n, int i) {
+    public FredholmSpetaDoi(double a, double b, int n, int i) {
         this.a = a;
         this.b = b;
         this.n = n;
@@ -43,10 +43,9 @@ public class FredholmSpetaUnu extends FredholmVolttera {
     private void initializareX() {
         x.add(0, a);
         double e = h;
-        for (int counter = 1; counter < i; ++counter) {
+        for (int counter = 1; counter <= i; ++counter) {
             x.add(counter, e);
             e += h;
-            System.out.println(x.get(counter));
         }
     }
 
@@ -56,11 +55,19 @@ public class FredholmSpetaUnu extends FredholmVolttera {
      * @see EcuatiiIntegraleFredholmVolterra.Ecuatie#f(double)
      */
     private void initializareU() {
-        LinkedList<Double> lista = new LinkedList<Double>();
+        LinkedList<Double> lista = new LinkedList<>();
         for (int counter = 0; counter < i; ++counter) {
             lista.add(counter, Ecuatie.f(x.get(counter)));
         }
-        u.add(lista);
+        u.add(0, lista);
+
+        for (int counter1 = 1; counter1 <= n; ++counter1) {
+            lista = new LinkedList<>();
+            for (int counter = 0; counter < i; ++counter) {
+                lista.add(counter, 0.0);
+            }
+            u.add(counter1, lista);
+        }
     }
 
     /**
@@ -72,15 +79,15 @@ public class FredholmSpetaUnu extends FredholmVolttera {
      */
     private void calculRezultat() {
         for (int counter1 = 0; counter1 < n; ++counter1) {
-            LinkedList<Double> lista = new LinkedList<Double>();
+            list = new LinkedList<>();
             for (int counter2 = 0; counter2 < i; ++counter2) {
-                LinkedList<Double> Val = new LinkedList<Double>();
+                Val = new LinkedList<>();
                 for (int counter3 = 0; counter3 < i; ++counter3) {
-                    Val.set(counter3, Nucleu.k(x.get(counter2), x.get(counter3)) * u.get(counter1).get(counter3));
+                    Val.add(counter3, Nucleu.k(x.get(counter2), x.get(counter3)) * u.get(counter1).get(counter3));
                 }
-                lista.set(counter2, trapz(x.get(counter2), Val.get(counter2)) + Ecuatie.f(x.get(counter2)));
+                list.add(counter2, trapz(x.get(counter2), Val.get(counter2)) + Ecuatie.f(x.get(counter2)));
             }
-            u.set(counter1, lista);
+            u.set(counter1 + 1, list);
         }
     }
 
@@ -93,8 +100,8 @@ public class FredholmSpetaUnu extends FredholmVolttera {
      */
     private double trapz(double x, double val) {
         double sum = 0.5 * (Ecuatie.f(x) + Ecuatie.f(val));
-        for (int ii = 0; ii < n; ii++) {
-            double xx = x + h * ii;
+        for (int counter = 0; counter < n; counter++) {
+            double xx = x + h * counter;
             sum = sum + Ecuatie.f(xx);
         }
         return sum * h;

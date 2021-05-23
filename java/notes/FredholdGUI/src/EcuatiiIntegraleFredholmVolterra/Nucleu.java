@@ -12,8 +12,6 @@ public class Nucleu {
      * @return rezulatul nucleului in x si y
      */
     public static double k(double x, double y) {
-        /* p=x*y/25; */
-        //return (x * y / 50);
-        return Math.sin(x - y);
+        return (x * y / 50);
     }
 }

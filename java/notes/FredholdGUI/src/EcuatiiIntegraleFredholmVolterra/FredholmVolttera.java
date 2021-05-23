@@ -2,12 +2,17 @@ package EcuatiiIntegraleFredholmVolterra;
 
 import java.util.LinkedList;
 
+
+/**
+ * Aceasta este o clasa abstracta din care se extind FredholmSpetaDoi si Volttera
+ */
 public abstract class FredholmVolttera {
     protected double a;
     protected double b;
     protected int n;
     protected int i;
     protected double h;
+    protected LinkedList<Double> list;
     protected LinkedList<Double> x = new LinkedList<Double>();
     protected LinkedList<LinkedList<Double>> u = new LinkedList<LinkedList<Double>>();
 
