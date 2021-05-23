@@ -520,3 +520,25 @@ B7.1. Reprezentați grafic tangenta la graficul funcției `f(x) = x**3 - 5x**2 +
 B7.2. Scrieți un program (sau foaie Jupyter) care să citească de la tastatură coeficienții `a, b, c` ai unei funcții de gradul doi de forma `f(x) = a*x**2 + b*x + c` și coeficienții `m, n` ai unei funcții de gradul întîi. Reprezentați grafic funcțiile respective, pentru un domeniu ales de utilizator, de forma `x = np.arange(start, stop, 1000)` (cu `start` și `stop` introduse de la tastatură) și găsiți punctele de intersecție între grafice (dacă există).
 
 **OBSERVAȚIE:** Vă puteți verifica graficele și calculele folosind [GeoGebra](https://www.geogebra.org/calculator).
+
+## Săptămîna 8: Elemente de statistică
+
+L8.1. Generați aleatoriu o listă de 1000 de numere întregi, între -100 și 100, păstrată în variabila `lista`. Împărțiți apoi lista în două liste, una cu numerele pozitive din prima listă și cealaltă cu numerele negative din prima listă, denumite, respecti, `lista_pozitive` și `lista_negative`. Păstrați separat numărul de apariții ale lui 0 în listă într-o variabilă `aparitii_zero`. Cu acestea:
+- calculați media listelor `lista_pozitive` și `lista_negative`;
+- calculați media listei alcătuite din modulele elementelor din `lista_negative`;
+- reprezentați grafic cu tipul de grafic `bar` perechile `(i, lista_pozitive[i])` și `(i, lista_negative[i])`;
+- pe graficul de mai sus, trasați și o bară corespunzătoare perechii `(0, aparitii_zero)`.
+
+L8.2. Generați aleatoriu două liste: `lista_numere` conține un număr aleatoriu (`nr_numere`) între 1000 și 2000 de numere întregi între -10 și 10 și `lista_ponderi`, de lungime `nr_numere`, care conține numere reale între 0 și 1.
+Calculați media ponderată a elementelor din `lista_numere`, cu ponderile din `lista_ponderi`.
+
+L8.3. Generați aleatoriu o listă de 100 de numere întregi între 0 și 10, stocată în variabila `lista`. Calculați modul (modurile) listei și reprezentați grafic, de tip `bar`, lista (perechi `(i, lista[i])`), cu bare verzi, de opacitate 30%.
+Trasați cu o bară roșie, de opacitate 100%, unde apare modul (apar modurile).
+
+L8.4. Generați aleatoriu o listă de 1000 de numere întregi, între 0 și 10, stocată în variabila `lista`. Calculați media (în variabila `media`). Reprezentați grafic, de tip `bar`, lista (perechi `(i, lista[i])`), cu bare negre, de opacitate 20%. Trasați peste, cu bare verzi, de opacitate 100%, valorile care se găsesc într-un interval de lungime 2 în jurul mediei (adică `[media - 1, media + 1]`).
+
+L8.5. Preluați un set de date CSV din setul [CORGIS](https://corgis-edu.github.io/corgis/csv/) și calculați, pentru o coloană aleasă:
+- media;
+- mediana;
+- modul/modurile;
+- abaterea standard.
