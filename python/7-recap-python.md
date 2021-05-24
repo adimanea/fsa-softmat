@@ -94,7 +94,7 @@ media datelor ponderate. Plasați legenda pe desen.
 de apariții. Reprezentați grafic:
 - în 2 figuri sau grafice diferite caracterele alfabetice și cele numerice, sortate alfabetic, respectiv crescător, de tip `bar` plot, înălțimea barelor fiind numărul de apariții;
 - calculați și trasați mediile celor două seturi ca orizontale, linie continuă albastră pentru caracterele alfabetice și linie punctată verde pentru caracterele numerice;
-- calculați și trasați abaterile standard pentru cele două seturi, sub formă de intervale colorate, în jurul mediilor (colorați, deci, intervalele `[medie - stdev, medie + stdev]`).
+- calculați și trasați abaterile standard pentru cele două seturi, sub formă de intervale colorate, în jurul mediilor (colorați, deci, intervalul `[medie - stdev, medie + stdev]`).
 
 **Observație:** Puteți folosi și două dicționare (sau 4 liste), pentru a separa caracterele numerice de cele alfabetice.
 
