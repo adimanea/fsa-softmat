@@ -460,7 +460,7 @@ B7.2. Scrieți un program (sau foaie Jupyter) care să citească de la tastatur�
 
 ## Săptămîna 8: Elemente de statistică
 
-L8.1. Generați aleatoriu o listă de 1000 de numere întregi, între -100 și 100, păstrată în variabila `lista`. Împărțiți apoi lista în două liste, una cu numerele pozitive din prima listă și cealaltă cu numerele negative din prima listă, denumite, respecti, `lista_pozitive` și `lista_negative`. Păstrați separat numărul de apariții ale lui 0 în listă într-o variabilă `aparitii_zero`. Cu acestea:
+L8.1. Generați aleatoriu o listă de 1000 de numere întregi, între -100 și 100, păstrată în variabila `lista`. Împărțiți apoi lista în două liste, una cu numerele pozitive din prima listă și cealaltă cu numerele negative din prima listă, denumite, respectiv, `lista_pozitive` și `lista_negative`. Păstrați separat numărul de apariții ale lui 0 în listă într-o variabilă `aparitii_zero`. Cu acestea:
 - calculați media listelor `lista_pozitive` și `lista_negative`;
 - calculați media listei alcătuite din modulele elementelor din `lista_negative`;
 - reprezentați grafic cu tipul de grafic `bar` perechile `(i, lista_pozitive[i])` și `(i, lista_negative[i])`;

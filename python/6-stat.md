@@ -26,10 +26,10 @@ media = (x1 + x2 + ... + xn) / length(l)
 - **media ponderată**, cu ponderi `p1, p2, ..., pn` se calculează prin înmulțirea valorilor `xi` cu ponderile corespunzătoare, împărțind apoi tot la numărul lor. În pseudocod, am scrie, pentru aceeași listă de mai sus, 
   
 ```
-media_ponderata = (x1 * p1 + x2 * p2 + ... + xn * pn) / (p1 + p2 + ... + pn)`;
+media_ponderata = (x1 * p1 + x2 * p2 + ... + xn * pn) / (p1 + p2 + ... + pn);
 ```
 
-- **mediana** este valoarea care apare în mijlocul setului de date, dacă avem un număr impar de date sau media aritmetică a celor două date care apar în mijloc, dacă avem un set cu un număr par de date. Astfel, de exemplu, pentru setul de date `[1, 2, 3, 4, 5]`, mediana este `3`, iar pentru setul de date `[1,2,3,4,5,6]`, mediana este `3.5 = (3 + 4) / 2`;
+- **mediana** este valoarea care apare în mijlocul setului de date, dacă avem un număr impar de date sau media aritmetică a celor două date care apar în mijloc, dacă avem un set cu un număr par de date. Astfel, de exemplu, pentru setul de date `[1, 2, 3, 4, 5]`, mediana este `3`, iar pentru setul de date `[1,2,3,4,5,6]`, mediana este `3.5 = (3 + 4) / 2`. Pentru a fi relevantă statistic, mediana se calculează pentru seturi de date ordonate!
 - **modul** este valoarea care apare cel mai frecvent. Dacă există o unică astfel de valoare, setul de date se numește *unimodal*, altfel, se numește *bimodal*, *trimodal* sau, în general, *multimodal*. Exemple:
     + modul setului `[1, 2, 2, 3, 4, 5]` este `2`;
     + modurile setului `[1, 2, 2, 3, 3, 4, 5]` sînt `2` și `3`;
