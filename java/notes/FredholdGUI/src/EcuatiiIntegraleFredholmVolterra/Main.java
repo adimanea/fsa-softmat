@@ -15,13 +15,13 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
 
-        FredholmSpetaDoi fredholmSpetaDoi = new FredholmSpetaDoi();
+        /*FredholmSpetaDoi fredholmSpetaDoi = new FredholmSpetaDoi();
         fredholmSpetaDoi.calculareTotala();
-        Utilitar.afisareGrafic(stage, fredholmSpetaDoi, "Ecuatie Fredholm Speta Doi");
+        Utilitar.afisareGrafic(stage, fredholmSpetaDoi, "Ecuatie Fredholm Speta Doi");*/
 
-        /*Volttera volttera = new Volttera();
-        volttera.calculareTotala();
-        Utilitar.afisareGrafic(stage, volttera, "Ecuatie Volttera");*/
+        Volterra volterra = new Volterra();
+        volterra.calculareTotala();
+        Utilitar.afisareGrafic(stage, volterra, "Ecuatie Volterra Speta Doi");
     }
 
     /**

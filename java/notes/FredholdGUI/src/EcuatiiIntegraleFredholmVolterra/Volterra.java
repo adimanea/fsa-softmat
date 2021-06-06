@@ -3,14 +3,14 @@ package EcuatiiIntegraleFredholmVolterra;
 import java.util.LinkedList;
 
 /**
- * Aceasta clasa ofera o metoda de rezolvare a ecuatiei Volttera
+ * Aceasta clasa ofera o metoda de rezolvare a ecuatiei Volterra
  */
-public class Volttera extends FredholmVolttera {
+public class Volterra extends FredholmVolterra {
 
     /**
-     * Constructorul implicit pentru ecuatia Volttera
+     * Constructorul implicit pentru ecuatia Volterra
      */
-    public Volttera() {
+    public Volterra() {
         i = 10;
         n = 5;
     }

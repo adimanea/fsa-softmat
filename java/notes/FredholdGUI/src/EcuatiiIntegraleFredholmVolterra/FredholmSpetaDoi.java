@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * Aceasta clasa ofera o metoda de rezolvare a ecuatiei Fredholm de speta II
  */
-public class FredholmSpetaDoi extends FredholmVolttera {
+public class FredholmSpetaDoi extends FredholmVolterra {
 
     private LinkedList<Double> Val;
 

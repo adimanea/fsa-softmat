@@ -21,23 +21,23 @@ public class Utilitar {
     public static Scene scene;
 
     /**
-     * Functia care afiseaza graficul pentru un obiect de tip FredholmVolttera
+     * Functia care afiseaza graficul pentru un obiect de tip FredholmVolterra
      *
      * @param stage
-     * @param fredholmVolttera obiectul FredholmSpetaDoi sau Volttera
+     * @param fredholmVolterra obiectul FredholmSpetaDoi sau Volterra
      * @param titlu            titlul graficului
      */
-    public static void afisareGrafic(Stage stage, FredholmVolttera fredholmVolttera, String titlu) {
+    public static void afisareGrafic(Stage stage, FredholmVolterra fredholmVolterra, String titlu) {
         stage.setTitle(titlu);
 
         xAxis.setLabel("Numar iteratii");
 
         lineChart.setTitle(titlu);
 
-        adaugareDateGrafic(fredholmVolttera);
+        adaugareDateGrafic(fredholmVolterra);
 
         scene = new Scene(lineChart, 800, 600);
-        for (int i = 0; i < fredholmVolttera.getN(); ++i) {
+        for (int i = 0; i < fredholmVolterra.getN(); ++i) {
             lineChart.getData().addAll(s.get(i));
         }
 
@@ -46,16 +46,16 @@ public class Utilitar {
     }
 
     /**
-     * Functia care adauga valorile in grafic ale unui obiect de tip FredholmVolttera
+     * Functia care adauga valorile in grafic ale unui obiect de tip FredholmVolterra
      *
-     * @param fredholmVolttera obiectul FredholmSpetaDoi sau Volttera
+     * @param fredholmVolterra obiectul FredholmSpetaDoi sau Volterra
      */
-    private static void adaugareDateGrafic(FredholmVolttera fredholmVolttera) {
-        for (int i = 0; i < fredholmVolttera.getN(); ++i) {
+    private static void adaugareDateGrafic(FredholmVolterra fredholmVolterra) {
+        for (int i = 0; i < fredholmVolterra.getN(); ++i) {
             series = new XYChart.Series();
             series.setName("Iteratia " + (i + 1));
-            for (int j = 0; j < fredholmVolttera.getI(); ++j) {
-                series.getData().add(new XYChart.Data(j + 1, fredholmVolttera.getU().get(i).get(j)));
+            for (int j = 0; j < fredholmVolterra.getI(); ++j) {
+                series.getData().add(new XYChart.Data(j + 1, fredholmVolterra.getU().get(i).get(j)));
             }
             s.add(series);
         }
