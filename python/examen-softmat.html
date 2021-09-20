@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Examen Java &#x219;i Software Matematic</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="examen-java-și-software-matematic">Examen Java și Software Matematic</h1>
+<h1 id="15-17-iunie-2021">15-17 iunie, 2021</h1>
+<p>Rezolvați, din exercițiile de mai jos, la alegere, astfel încît
+să totalizați maximum 2 puncte din fiecare secțiune.</p>
+<p>Pentru exercițiile Python, le puteți rezolva în fișiere individuale <code>.py</code>
+sau în cîte o foaie Jupyter sau pe toate într-o singură foaie Jupyter.</p>
+<p><strong>Exercițiile rezolvate peste punctaj se vor ignora. Se acordă, însă, punctaje parțiale pe exerciții (nu vor fi notate doar cu 0 sau maxim).</strong></p>
+<p>Pentru rezolvarea oricărui exercițiu, se pot folosi fie metodele, modulele și bibliotecile
+studiate la curs și laborator, fie oricare altele, cu condiția ca studentul să poată
+explica detaliat eventual, la evaluarea orală, funcționarea programului.</p>
+<h2 id="python-secțiunea-1-calcule">Python, secțiunea 1: Calcule</h2>
+<p>P1.1. <strong>(0.5p)</strong> Citiți de la tastatură un număr întreg pozitiv <code>n</code> și afișați
+o listă de <code>n</code> numere, astfel <code>[1, 2, 2, 3, 3, 3, 4, 4, 4, 4, ...]</code>.
+Includeți condiții de validare a datelor.</p>
+<p>Exemplu: Pentru <code>n = 3</code> se afișează <code>[1, 2, 2]</code>. Pentru <code>n = 7</code>,
+se afișează <code>[1, 2, 2, 3, 3, 3, 4]</code>.</p>
+<p>P1.2. <strong>(1p)</strong> Citiți de la tastatură un număr <code>n</code>, o listă de <code>n</code> persoane
+și un număr <code>c</code>. Afișați persoanele din listă circular, din <code>c</code> în <code>c</code>. Numărătoarea
+se consideră 1-indexată. Includeți condiții de validare a datelor.</p>
+<p>Exemplu:</p>
+<pre><code><code><div>IN: n = 5
+IN: Ana
+IN: Ionel
+IN: Maria
+IN: George
+IN: Cristi
+IN: c = 3
+OUT: Maria
+OUT: Ana
+OUT: George
+OUT: Ionel
+OUT: Cristi
+</div></code></code></pre>
+<p>P1.3. <strong>(2p)</strong> Doi jucători dau cu 2 zaruri. Cîștigă jucătorul care
+dă o dublă în cele mai puține aruncări. Aruncarea zarurilor se va realiza folosind
+modulul <code>random</code> și se contorizează numărul de aruncări pînă la realizarea unei duble.</p>
+<p>Exemplu:</p>
+<pre><code><code><div>- Jucătorul 1, aruncarea 1: [3, 5]
+- Jucătorul 1, aruncarea 2: [1, 5]
+- Jucătorul 1, aruncarea 3: [2, 2]
+- Jucătorul 1 a dat o dublă din 3 aruncări.
+- Jucătorul 2, aruncarea 1: [5, 1]
+- Jucătorul 2, aruncarea 2: [3, 5]
+- Jucătorul 2, aruncarea 3: [4, 5]
+- Jucătorul 2, aruncarea 4: [1, 1]
+- Jucătorul 2 a dat o dublă din 4 aruncări.
+- Jucătorul 1 a cîștigat.
+GAME OVER
+</div></code></code></pre>
+<p>Opțional, dacă se atinge numărul de aruncări ale primului jucător și jucătorul 2 nu a dat dublă,
+jocul deja se termină. Astfel, la aruncarea 3, deoarece jucătorul 2 nu a dat dublă,
+deja s-a terminat jocul.</p>
+<p>P1.4. <strong>(1p)</strong> Se citește de la tastatură un număr <code>n</code> (cel puțin egal cu 1000) și se afișează
+ce factori primi are în descompunere, care apar la putere mai mare decît 1. Se afișează apoi
+numărul liber de pătrate rezultat, adică compus din factorii primi ai lui <code>n</code>, fiecare la puterea 1.</p>
+<p>Exemplu: <code>n = 1000</code>, se afișează <code>1000 are factorul 2 la puterea 3 și factorul 5 la puterea 3</code>.
+Se afișează apoi <code>Numărul liber de pătrate rezultat este 2 * 5 = 10</code>.</p>
+<p>Alt exemplu: <code>n = 7000</code>, se afișează <code>6000 are factorul 2 la puterea 3 și factorul 5 la puterea 3</code>.
+Se afișează apoi <code>Numărul liber de pătrate rezultat este 2 * 5 * 7 = 70</code>.</p>
+<p>P1.5. <strong>(1p)</strong> Citiți de la tastatură <code>n</code> și afișați primele <code>n</code> sume ale lui Gauss, cu tot cu valoarea lor.</p>
+<p>Exemplu:</p>
+<pre><code><code><div>n = 4
+1 = 1
+1 + 2 = 3
+1 + 2 + 3 = 6
+1 + 2 + 3 + 4 = 10
+</div></code></code></pre>
+<p>P1.6. <strong>(2p)</strong> Se generează aleatoriu o listă <code>numere</code> de 1000 numere întregi, între 100 și 1000.
+Se extrag din listă doar numerele care apar o singură dată și se salvează într-o listă, <code>unice</code>.
+Se generează o listă de ponderi întregi între 0 și 10, de lungime egală cu lungimea listei <code>unice</code>,
+numită <code>ponderi_unice</code>.
+Să se afișeze:</p>
+<ul>
+<li>media aritmetică a valorilor din lista <code>unice</code>;</li>
+<li>media ponderată a valorilor din lista <code>unice</code>, cu ponderile din <code>ponderi_unice</code>;</li>
+<li>mediana listei <code>unice</code>;</li>
+<li>modul/modurile listei <code>unice</code>;</li>
+<li>abaterea medie pătratică a listei <code>unice</code>.</li>
+</ul>
+<h2 id="python-secțiunea-2-grafice">Python, secțiunea 2: Grafice</h2>
+<p><strong>Observație:</strong> Dacă nu se precizează explicit, puteți folosi orice setări vizuale
+pentru grafice (culoare, opacitate, stilul liniei etc.). Dacă există o precizare explicită,
+(ne)respectarea ei va fi (de)punctată.</p>
+<p>P2.1. <strong>(2p)</strong> Generați aleatoriu o listă de 1000 de numere întregi, între 1 și 100.
+Salvați, apoi, în variabile diferite, numărul de numere din listă:</p>
+<ul>
+<li>divizibile cu 3, de exemplu în variabila <code>div3</code>;</li>
+<li>divizibile cu 5, de exemplu în variabila <code>div5</code>;</li>
+<li>divizibile cu 3 și cu 5, de exemplu în variabila <code>div35</code>;</li>
+<li>divizibile cu 3, dar nu cu 5, de exemplu în variabila <code>div3n5</code>;</li>
+<li>prime, de exemplu în variabila <code>prime</code>.</li>
+</ul>
+<p>Reprezentați apoi printr-un grafic de tip &quot;bar&quot;, cu bare negre de opacitate 25%, aceste variabile.
+Pe axa OX veți avea etichetele <code>[div3, div5, div35, div3n5, prime]</code>, iar pe axa OY, valorile acestor variabile.</p>
+<p>P2.2. <strong>(2p)</strong> Generați aleatoriu o listă de 1000 de numere întregi, între 1 și 100.
+Salvați, apoi, în variabile diferite, numărul de numere din listă care sînt pătrate perfecte
+(de exemplu, în variabila <code>pp</code>) și numărul de numere din listă care nu sînt pătrate perfecte
+(de exemplu, în variabila <code>nopp</code>). Reprezentați apoi, folosind un grafic de tip &quot;pie chart&quot;,
+procentul reprezentat de <code>pp</code> și <code>nopp</code> din numărul total de numere.</p>
+<p>Plasați și legenda graficului, precum și etichetele și valorile pe feliile graficului.</p>
+<p>P2.3. Se dă funcția <code>f(x) = x**3 + sin(x)**3</code>.</p>
+<ul>
+<li><strong>(1p)</strong> Reprezentați-o grafic, cu linie roșie, de opacitate 23%, pe domeniul <code>[-4, 4]</code>, folosind cel puțin 100 de puncte;</li>
+<li><strong>(1p)</strong> Folosind același domeniu, trasați graficul funcției <code>g(x) = sin(x)</code>, cu o linie verde, de opacitate 80%;</li>
+<li><strong>(1p)</strong> Găsiți coordonatele punctelor de intersecție între cele două grafice și afișați-le, pentru intervalul <code>[-4, 4]</code>.</li>
+</ul>
+
+    </body>
+    </html>
